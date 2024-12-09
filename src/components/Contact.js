@@ -160,7 +160,7 @@ const Contact = () => {
                                 .options[0]
                             }
                           </span>
-                          <a href="tel:34633738138">+34 (633) 73 81 38</a>
+                          <a href="tel:447452231662">+44 745 223 16 62</a>
                         </li>
                         <li>
                           <span>
