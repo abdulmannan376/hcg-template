@@ -64,7 +64,6 @@ const Contact = () => {
           setTimeout(() => {
             setIsSuccess(false);
           }, 2000);
-          setStatus({ type: "success", message: "Email Sent" });
           setFormData({ name: "", email: "", message: "" }); // Reset form on success
         },
         (error) => {
