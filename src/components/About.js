@@ -636,11 +636,11 @@ const About = () => {
                     data-dsn-animate="up"
                     style={{ width: "100%" }}
                   >
-                    <div className="title-sub-container">
+                    {/* <div className="title-sub-container">
                       <p className="title-sub">
                         {translations.about?.section4?.subHeading}
                       </p>
-                    </div>
+                    </div> */}
                     <h2 className="title-main">
                       {translations?.about?.section11?.heading}
                     </h2>

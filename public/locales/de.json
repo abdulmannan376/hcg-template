@@ -208,20 +208,8 @@
       "subHeading": "UNSER TEAM",
       "cards": [
         {
-          "heading": "Blake Hamilton",
-          "subHeading": "Projektmanager"
-        },
-        {
-          "heading": "Ahmed Shawky",
-          "subHeading": "Webdesigner"
-        },
-        {
-          "heading": "John Doe",
-          "subHeading": "Ingenieur"
-        },
-        {
-          "heading": "Hesham Megahed",
-          "subHeading": "Gründer"
+          "heading": "Sasa Bogdanov",
+          "subHeading": "CEO"
         }
       ]
     },
