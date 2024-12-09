@@ -5,6 +5,9 @@ import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import LeafletMap from "./LeafletMap";
 import emailjs from "emailjs-com";
+import { TiTick } from "react-icons/ti";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { IoClose } from "react-icons/io5";
 
 const Contact = () => {
   const { translations } = useContext(LanguageContext);
@@ -16,6 +19,9 @@ const Contact = () => {
     message: "",
   });
   const [status, setStatus] = useState({ type: "", message: "" });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isFailure, setIsFailure] = useState(false);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -26,6 +32,8 @@ const Contact = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setIsLoading(true);
 
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
@@ -50,10 +58,20 @@ const Contact = () => {
             response.status,
             response.text
           );
+          setIsLoading(false);
+          setIsSuccess(true);
+          setTimeout(() => {
+            setIsSuccess(false);
+          }, 2000);
           setStatus({ type: "success", message: "Email Sent" });
           setFormData({ name: "", email: "", message: "" }); // Reset form on success
         },
         (error) => {
+          setIsLoading(false);
+          setIsSuccess(true);
+          setTimeout(() => {
+            setIsFailure(false);
+          }, 2000);
           console.error("Error sending email:", error);
           alert("Failed to send email. Please try again later.");
         }
@@ -267,11 +285,27 @@ const Contact = () => {
                           </div>
 
                           <div className="image-zoom" data-dsn="parallax">
-                            <button>
-                              {
+                            <button
+                              disabled={isLoading || isSuccess || isFailure}
+                            >
+                              {!isLoading &&
+                                !isSuccess &&
+                                !isFailure &&
                                 translations?.contact?.section2?.cards[1]
-                                  .actionText
-                              }
+                                  .actionText}
+                              {isLoading && (
+                                <AiOutlineLoading3Quarters className="animate-spin" />
+                              )}
+                              {isSuccess && (
+                                <TiTick
+                                  style={{ color: "green", fontSize: "24px" }}
+                                />
+                              )}
+                              {isFailure && (
+                                <IoClose
+                                  style={{ color: "red", fontSize: "24px" }}
+                                />
+                              )}
                             </button>
                           </div>
                         </div>
