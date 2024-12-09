@@ -8,6 +8,7 @@ import emailjs from "emailjs-com";
 import { TiTick } from "react-icons/ti";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const { translations } = useContext(LanguageContext);
@@ -76,6 +77,17 @@ const Contact = () => {
           alert("Failed to send email. Please try again later.");
         }
       );
+  };
+
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  const handleCaptchaChange = (value) => {
+    if (value) {
+      console.log("Captcha verified:", value);
+      setCaptchaVerified(true);
+    } else {
+      setCaptchaVerified(false);
+    }
   };
 
   return (
@@ -283,10 +295,16 @@ const Contact = () => {
                             </div>
                             <div className="help-block with-errors"></div>
                           </div>
+                          {/* Google reCAPTCHA Component */}
+                          <ReCAPTCHA
+                            sitekey="6LcZuZYqAAAAAJq3RB03hRwMshfrkIDdfWq14ola" // Replace with your Google reCAPTCHA site key
+                            onChange={handleCaptchaChange}
+                            style={{ marginBottom: "10px"}}
+                          />
 
                           <div className="image-zoom" data-dsn="parallax">
                             <button
-                              disabled={isLoading || isSuccess || isFailure}
+                              disabled={!captchaVerified || isLoading || isSuccess || isFailure}
                             >
                               {!isLoading &&
                                 !isSuccess &&
