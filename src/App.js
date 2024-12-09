@@ -31,6 +31,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import Impressum from "./components/Impressum";
 import { LanguageProvider } from "./context/LanguageContext";
 import Services2 from "./components/Services2";
+import RedirectComponent from "./components/RedirectComponent";
 
 function App() {
   useEffect(() => {
@@ -111,6 +112,7 @@ function App() {
         <div data-dsn-temp="light"></div>
         {/* <Preloader /> */}
         <Routes>
+          <Route path="/" element={<RedirectComponent/>} />
           <Route path="/:lang/" element={<MainContent />} />
           <Route path="/:lang/about" element={<About />} />
           <Route path="/:lang/projects" element={<Services />} />
