@@ -199,7 +199,7 @@
       infinite: true,
       slidesToShow: 2,
       arrows: false,
-      dots: true,
+      dots: false,
       responsive: [
         {
           breakpoint: 800,
