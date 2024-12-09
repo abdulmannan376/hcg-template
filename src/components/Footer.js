@@ -1,8 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const Footer = () => {
+  const { lang } = useParams();
   return (
-    <footer style={{ marginTop: "30px"}}>
+    <footer style={{ marginTop: "30px" }}>
       <div className="info">
         <div className="contact-footer">
           <a
@@ -34,7 +36,16 @@ const Footer = () => {
               </a>
             </li> */}
             <li className="image-zoom" data-dsn="parallax">
-              <a href="https://www.linkedin.com/company/hotel-consulting-group-london/about/?viewAsMember=true" target="_blank" rel="noreferrer">
+              <a href={`/${lang}/contact`} rel="noreferrer">
+                Contact US
+              </a>
+            </li>
+            <li className="image-zoom" data-dsn="parallax">
+              <a
+                href="https://www.linkedin.com/company/hotel-consulting-group-london/about/?viewAsMember=true"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Linkedin
               </a>
             </li>
