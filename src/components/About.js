@@ -736,7 +736,7 @@ const About = () => {
 
                   <div className="wapper-client">
                     <div className="logo-box">
-                      <img src="assets/img/logo/1-light.png" alt="" />
+                      <img src="/assets/img/logo/1-light.png" alt="" />
 
                       <div className="info">
                         <div className="content">
@@ -755,7 +755,7 @@ const About = () => {
                     </div>
 
                     <div className="logo-box">
-                      <img src="assets/img/logo/2-light.png" alt="" />
+                      <img src="/assets/img/logo/2-light.png" alt="" />
 
                       <div className="info">
                         <div className="content">
@@ -774,7 +774,7 @@ const About = () => {
                     </div>
 
                     <div className="logo-box">
-                      <img src="assets/img/logo/3-light.png" alt="" />
+                      <img src="/assets/img/logo/3-light.png" alt="" />
 
                       <div className="info">
                         <div className="content">
@@ -793,7 +793,7 @@ const About = () => {
                     </div>
 
                     <div className="logo-box">
-                      <img src="assets/img/logo/4-light.png" alt="" />
+                      <img src="/assets/img/logo/4-light.png" alt="" />
 
                       <div className="info">
                         <div className="content">
@@ -812,7 +812,7 @@ const About = () => {
                     </div>
 
                     <div className="logo-box">
-                      <img src="assets/img/logo/5-light.png" alt="" />
+                      <img src="/assets/img/logo/5-light.png" alt="" />
 
                       <div className="info">
                         <div className="content">
@@ -831,7 +831,7 @@ const About = () => {
                     </div>
 
                     <div className="logo-box">
-                      <img src="assets/img/logo/6-light.png" alt="" />
+                      <img src="/assets/img/logo/6-light.png" alt="" />
 
                       <div className="info">
                         <div className="content">
