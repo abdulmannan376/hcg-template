@@ -694,7 +694,7 @@ const About = () => {
                 </div>
               </section>
 
-              <section className="our-client section-margin">
+              {/* <section className="our-client section-margin">
                 <div className="container">
                   <div className="one-title" data-dsn-animate="up">
                     <div className="title-sub-container">
@@ -719,9 +719,9 @@ const About = () => {
                     ))}
                   </div>
                 </div>
-              </section>
+              </section> */}
 
-              <section className="brand-client section-margin">
+              {/* <section className="brand-client section-margin">
                 <div className="container">
                   <div className="one-title" data-dsn-animate="up">
                     <div className="title-sub-container">
@@ -850,7 +850,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </section>
+              </section> */}
             </div>
 
             {/* <section className="contact-up section-margin section-padding">
