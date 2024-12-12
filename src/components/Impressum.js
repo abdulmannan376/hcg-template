@@ -10,11 +10,14 @@ export default function Impressum() {
       <Navbar showBlackBg={true} />
       <main className="main-root">
         <div id="dsn-scrollbar">
-          <header style={{ backgroundColor: "#edeae2"}}>
+          <header style={{ backgroundColor: "#edeae2" }}>
             <div className="container header-hero">
               <div className="row">
                 <div className="col-lg-6">
-                  <div className="contenet-hero" style={{ paddingBottom: "30px"}}>
+                  <div
+                    className="contenet-hero"
+                    style={{ paddingBottom: "30px" }}
+                  >
                     <h5>{translations?.impressum?.heading}</h5>
                     <h1>{translations?.impressum?.subHeading}</h1>
                   </div>
@@ -23,7 +26,7 @@ export default function Impressum() {
             </div>
           </header>
 
-          <div className="wrapper" style={{ backgroundColor: "#edeae2"}}>
+          <div className="wrapper" style={{ backgroundColor: "#edeae2" }}>
             <div className="privacy-policy container section-margin">
               <section>
                 {/* <h2>Privacy Policy</h2> */}
@@ -121,6 +124,19 @@ export default function Impressum() {
                       __html: translations?.impressum?.sections[7]?.content[1],
                     }}
                   ></li>
+                </ul>
+                <h3>{translations?.impressum?.sections[8]?.title}</h3>
+                {/* <p>{translations?.impressum?.sections[8]?.content[0]}</p> */}
+                <ul>
+                  {translations?.impressum?.sections[8]?.content?.map(
+                    (item) => (
+                      <li
+                        dangerouslySetInnerHTML={{
+                          __html: item,
+                        }}
+                      ></li>
+                    )
+                  )}
                 </ul>
               </section>
             </div>
