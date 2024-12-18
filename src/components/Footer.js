@@ -23,7 +23,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="copyright-social">
-          <p>© 2024 HOtel Consulting Group</p>
+          <p>© 2025 Hotel Consulting Group</p>
           <ul>
             {/* <li className="image-zoom" data-dsn="parallax">
               <a href="#" target="_blank" rel="noreferrer">
